@@ -10,11 +10,11 @@ def tonum(s):
     except:
         return float(s)
 
-ans = 0.0
+ans = 1.0
 for line in sys.stdin:
     line = line.rstrip()
-    ans += float(line)
+    ans *= float(line)
 
 
-print('足し算の結果は')
+print('かけ算の結果は')
 print(ans)
