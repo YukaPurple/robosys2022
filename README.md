@@ -1,3 +1,5 @@
+![test](https://github.com/YukaPurple/robosys2022/actions/workflows/test.yml/badge.svg)
+
 # robosys2022
 ロボットシステム学2022
 
