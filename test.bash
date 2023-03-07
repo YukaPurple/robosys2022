@@ -2,17 +2,14 @@
 # SPDX-FileCopyrightText: 2023 Yukari Watarai
 # SPDX-License-Identifier: BSD-3-Clause
 
-#!/bin/bash
-# SPDX-FileCopyrightText: 2023 Yukari Watarai
-# SPDX-License-Identifier: BSD-3-Clause
 
 ng () {
 	echo NG at Line $1
 	res=1
+
 }
 
 res=0
-
 
 #「seq 5」を入力
 out=$(seq 5 | ./plus.py)
@@ -26,7 +23,6 @@ out=$(seq 5 | ./times.py)
 [ "$res" = 0 ] && echo OK
 exit $res
 
-
 #「あ」を入力
 out=$(echo あ | ./plus.py)
 [ "$?" = 1 ]       || ng ${LINENO}
@@ -36,7 +32,6 @@ out=$(echo あ | ./times.py)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
-
 #「echo」を入力
 out=$(echo | ./plus.py)
 [ "$?" = 1 ]       || ng ${LINENO}
@@ -45,7 +40,6 @@ out=$(echo | ./plus.py)
 out=$(echo | ./times.py)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
-
 
 [ "$res" = 0 ] && echo OK
 exit $res
