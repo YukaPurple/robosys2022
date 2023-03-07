@@ -13,13 +13,13 @@ res=0
 
 #「seq 5」を入力
 out=$(seq 5 | ./plus.py)
-[ "${out}" = 15 ] || ng ${LINENO}
+[ "${out}" = 15.0 ] || ng ${LINENO}
 [ "${res}" = 0 ] && echo OK
 
 exit $res
 
 out=$(seq 5 | ./times.py)
-[ "${out}" = 120 ] || ng ${LINENO}
+[ "${out}" = 120.0 ] || ng ${LINENO}
 [ "$res" = 0 ] && echo OK
 
 
