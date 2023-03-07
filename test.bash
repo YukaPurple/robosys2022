@@ -21,6 +21,8 @@ out=$(seq 5 | ./times.py)
 
 [ "$res" = 0 ] && echo OK
 
+exit $res
+
 #「あ」を入力
 out=$(echo あ | ./plus.py)
 [ "$?" = 1 ]       || ng ${LINENO}
