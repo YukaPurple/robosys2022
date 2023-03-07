@@ -4,7 +4,7 @@
 
 
 ng () {
-	echo NG at Line $1
+	echo NG at Line ${1}
 	res=1
 
 }
@@ -13,15 +13,15 @@ res=0
 
 #「seq 5」を入力
 out=$(seq 5 | ./plus.py)
-
-[ "$res" = 0 ] && echo OK
-
-out=$(seq 5 | ./times.py)
-[ "${out}" = 120.0 ] || ng ${LINENO}
-
-[ "$res" = 0 ] && echo OK
+[ "${out}" = 15 ] || ng ${LINENO}
+[ "${res}" = 0 ] && echo OK
 
 exit $res
+
+out=$(seq 5 | ./times.py)
+[ "${out}" = 120 ] || ng ${LINENO}
+[ "$res" = 0 ] && echo OK
+
 
 #「あ」を入力
 out=$(echo あ | ./plus.py)
