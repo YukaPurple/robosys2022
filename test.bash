@@ -16,8 +16,6 @@ out=$(seq 5 | ./plus.py)
 [ "${out}" = 15.0 ] || ng ${LINENO}
 [ "${res}" = 0 ] && echo OK
 
-exit $res
-
 out=$(seq 5 | ./times.py)
 [ "${out}" = 120.0 ] || ng ${LINENO}
 [ "$res" = 0 ] && echo OK
