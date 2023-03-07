@@ -15,6 +15,4 @@ for line in sys.stdin:
     line = line.rstrip()
     ans += float(line)
 
-
-print('足し算の結果は')
 print(ans)
